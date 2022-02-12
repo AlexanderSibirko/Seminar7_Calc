@@ -15,7 +15,7 @@ def Calc_block(left_value, oper, right_value):
     if (oper =='/') and (right_value != 0):
         res = div(left_value, right_value)
     else:
-        res = nan
+        res = 'Ошибка деления на 0!'
     return res
 
 
