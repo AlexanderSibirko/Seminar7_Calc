@@ -1,39 +1,36 @@
-# модуль для расчетов операций с комплексными числами
+# модуль для расчетов операций
 
-# import cmath
+import cmath
+from fractions import Fraction
+from re import U
 
-from math import nan
 
-
-def Calc_block(left_value, oper, right_value):
+def Calc_block(data):
+    left_value, oper, right_value = data
     if oper == '+':
-        res = sum(left_value, right_value)
+        result = sum(left_value, right_value)
     if oper == '-':
-        res = sub(left_value, right_value)
+        result = sub(left_value, right_value)
     if oper == '*':
-        res = mult(left_value, right_value)
+        result = mult(left_value, right_value)
     if (oper =='/') and (right_value != 0):
-        res = div(left_value, right_value)
+        result = div(left_value, right_value)
     else:
-        res = 'Ошибка деления на 0!'
+        result = 'Ошибка деления на 0!'
     return res
 
 
-def sum(left_value: complex, right_value: complex):
+def sum(left_value, right_value):
     return left_value + right_value
 
 
-def sub(left_value: complex, right_value: complex):
+def sub(left_value, right_value):
     return left_value - right_value
 
 
-def mult(left_value: complex, right_value: complex):
+def mult(left_value, right_value):
     return left_value * right_value
 
 
-def div(left_value: complex, right_value: complex):
+def div(left_value, right_value):
     return left_value / right_value
-
-# a = 0 + 0j
-# b = 0 + 0j
-# print(Calc_block(a,'/', b))
