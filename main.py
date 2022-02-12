@@ -1,10 +1,13 @@
 from c_calc import Calc_block as c_calc
-# import console_ui
 from logger import result_logger as write_log
+import data_transformation as d_t
+import console_ui as c_ui
 
-a, op, b = console_ui.ask_user()
-# a = float('5')
-# op = '+'
-# b = 3
-res = c_calc(a,op,b)
-write_log(a,op,b,res)
+
+def button_click():
+    j = d_t.data_formatting(c_ui.input_data())
+    c_ui.view_data(c_calc(j), 'Ответ:')
+    write_log(j, c_calc(j))
+
+
+button_click()
