@@ -4,6 +4,7 @@ import cmath
 from fractions import Fraction
 from re import U
 
+
 def Calc_block(data):
     left_value, oper, right_value = data
     if oper == '+':
@@ -12,9 +13,11 @@ def Calc_block(data):
         result = sub(left_value, right_value)
     if oper == '*':
         result = mult(left_value, right_value)
-    if oper == '/':
+    if (oper =='/') and (right_value != 0):
         result = div(left_value, right_value)
-    return result
+    else:
+        result = 'Ошибка деления на 0!'
+    return res
 
 
 def sum(left_value, right_value):
