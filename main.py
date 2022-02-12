@@ -6,8 +6,8 @@ import console_ui as c_ui
 
 def button_click():
     j = d_t.data_formatting(c_ui.input_data())
-    c_ui.view_data(c_calc(j), 'Ответ:')
-    write_log(j, c_calc(j))
-
+    calc_result = c_calc(j)
+    c_ui.view_data(calc_result, 'Ответ:')
+    write_log(j, calc_result)
 
 button_click()
