@@ -34,6 +34,6 @@ def mult(left_value: complex, right_value: complex):
 def div(left_value: complex, right_value: complex):
     return left_value / right_value
 
-a = 0 + 0j
-b = 0 + 0j
-print(Calc_block(a,'/', b))
+# a = 0 + 0j
+# b = 0 + 0j
+# print(Calc_block(a,'/', b))
