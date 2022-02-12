@@ -5,7 +5,11 @@ from time import time
 def oper_logger(left_value, oper, right_value):
   data_str = f'{str(left_value)} {oper} {str(right_value)}'
   time = dt.now().strftime('%H:%M')
+<<<<<<< HEAD
   print('{}; операция : {} \n'.format(time, data_str))
+=======
+  # print('{}; операция : {} результат : {}\n'.format(time, data_str, data))
+>>>>>>> logger
   with open('log.csv', 'a', encoding = 'UTF-8') as file:
     file.write('{}; операция : {} \n'.format(time, data_str))
 # 
