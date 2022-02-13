@@ -1,7 +1,6 @@
-from c_calc import Calc_block as c_calc
-# import console_ui
-from logger import result_logger as write_log
+import controller as c
 
+<<<<<<< HEAD
 
 # a = 6
 # op = '-'
@@ -22,3 +21,6 @@ from logger import result_logger as write_log
 # b = 0
 # res = c_calc(a,op,b)
 # write_log(a,op,b,res)
+=======
+c.button_click()
+>>>>>>> logger
